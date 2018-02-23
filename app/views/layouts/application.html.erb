@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  #mc_embed_signup{background: transparent; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+    
+     <%= analytics_init if GoogleAnalytics.valid_tracker? %>
+    <%= render 'includes/head' %>
+  </head>
+
+  <body>
+
+     <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+         <a class="navbar-brand" href="#"> <img src="https://www.thehackingproject.org/assets/thp-logo-5f2f06c9444205a88123ca1de74646970e5a1dfb03698d02db33e5e62a60d6cd.png" style="width:35px;border-radius: 50%;"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <% unless current_page?(root_path) %>
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <% end %>
+            <li class="nav-item">
+              <a class="nav-link" href="/code">Code</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/sales">Vente</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/locations/all">Une formation dans ta ville</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <%= yield %>
+    <script type="text/javascript">
+(function(){
+window['gobot'] = window['gobot'] || function(){(window['gobot'].queue = window['gobot'].queue || []).push(arguments)}
+var script = document.createElement('script')
+script.async = 1
+script.src = 'https://www.getgobot.com/app/v1/gobot-client.js'
+var insert = document.getElementsByTagName('script')[0]
+insert.parentNode.insertBefore(script, insert)
+})()
+gobot('create', '-L5yO-M5wtZvkXd1XDLh')
+gobot('pageview')
+</script>
+
+    <footer class="footer bg-light">
+      <%= render 'includes/footer' %>
+    </footer>
+
+  </body>
+
+</html>

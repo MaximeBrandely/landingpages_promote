@@ -1,0 +1,40 @@
+<!-- Masthead -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <p class="text-center">
+            <img src="https://www.thehackingproject.org/assets/thp-logo-5f2f06c9444205a88123ca1de74646970e5a1dfb03698d02db33e5e62a60d6cd.png" style="height:10em;border-radius: 50%;"/></a>
+        </p>
+       
+        <h1 class="mb-5" style="background: rgba(0,0,0,0.5);
+    margin: 15px;
+    padding: 15px;">
+          <% if @page %>
+            <%= @page.title.html_safe %>
+          <% else %>
+            <%= "The Hacking Project à " + @city %>
+            <p class="lead mb-0">
+              Une formation intense et gratuite immerge toi dans l' univers du <a href="/code" class="text-white" style="font-weight: 600">code</a> ou de la <a href="/sales" class="text-white" style="font-weight: 600"><strong>vente</strong></a>
+            </p>
+          <% end %>  
+        </h1>
+      </div>
+      <div class="col-md-10 col-lg-8 col-xl-7 mx-auto"  style="background: transparent;">
+      <!-- Begin MailChimp Signup Form -->
+
+      <div id="mc_embed_signup">
+      <form action="https://herokuapp.us17.list-manage.com/subscribe/post?u=6a20d796503bb5a23e8b0dee7&amp;id=c07172877d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+        
+        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6a20d796503bb5a23e8b0dee7_c07172877d" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Inscription Newsletter" name="subscribe" id="mc-embedded-subscribe" class="btn btn-sm btn-primary" style="margin: 1px;"></div>
+          </div>
+      </form>
+      </div>
+
+<!--End mc_embed_signup-->
+      </div>
+    </div>
+  </div>

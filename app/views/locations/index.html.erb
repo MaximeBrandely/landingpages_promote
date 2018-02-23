@@ -1,0 +1,22 @@
+<header class="masthead text-white text-center">
+ 
+<%= render 'pages/partials/header' %>
+</header>
+<div class="container">
+<% @locations.in_groups_of(4, false).each do |group| %>
+  <div class='row'>
+    <% group.each do |location| %>
+      <div class='col-md-3'>
+     <%= link_to "#{location.ville}", location_show_path(location), style: "font-size:10px" %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+</div>
+ <section class="testimonials text-center bg-light">
+    <%= render 'pages/partials/testimonials'%>
+  </section>
+
+    <%= render 'pages/partials/cta_bottom'%>
+
+

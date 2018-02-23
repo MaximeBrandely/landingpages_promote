@@ -1,0 +1,16 @@
+<div class="container-fluid text-center">
+	<h1 >
+		The Hacking Project à	<%= @location.ville.capitalize! %>
+	</h1>
+
+	<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@location.lat},#{@location.lng}&markers=#{@location.lat},#{@location.lng}&zoom=7&size=640x400&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8",
+              class: 'img-responsive', alt: "#{@location.ville} on the map"%>
+</div>
+
+ <section class="testimonials text-center bg-light">
+    <%= render 'pages/partials/testimonials'%>
+  </section>
+
+    <%= render 'pages/partials/cta_bottom'%>
+
+
